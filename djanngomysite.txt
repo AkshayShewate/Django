@@ -1,0 +1,2306 @@
+local console 1
+
+Microsoft Windows [Version 10.0.18363.836]
+(c) 2019 Microsoft Corporation. All rights reserved.
+(venv) C:\Users\Akshay\PycharmProjects\project_django>pip install django
+Collecting django
+  Using cached https://files.pythonhosted.org/packages/5c/63/6d7efecbf3f06db8c6577950a24a191e55cadf7cda4d7fe6976206c886dd/Django-3.0.7-py3-none-any.whl
+Collecting sqlparse>=0.2.2 (from django)
+  Using cached https://files.pythonhosted.org/packages/85/ee/6e821932f413a5c4b76be9c5936e313e4fc626b33f16e027866e1d60f588/sqlparse-0.3.1-py2.py3-none-any.whl
+Collecting pytz (from django)
+  Using cached https://files.pythonhosted.org/packages/4f/a4/879454d49688e2fad93e59d7d4efda580b783c745fd2ec2a3adf87b0808d/pytz-2020.1-py2.py3-none-any.whl
+Collecting asgiref~=3.2 (from django)
+  Using cached https://files.pythonhosted.org/packages/68/00/25013f7310a56d17e1ab6fd885d5c1f216b7123b550d295c93f8e29d372a/asgiref-3.2.7-py2.py3-none-any.whl
+Installing collected packages: sqlparse, pytz, asgiref, django
+Successfully installed asgiref-3.2.7 django-3.0.7 pytz-2020.1 sqlparse-0.3.1
+WARNING: You are using pip version 19.2.3, however version 20.1.1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django>django-admin startproject mysite
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django>cd mysite
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver 127.0.0.1:8080
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+June 04, 2020 - 11:50:01
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8080/
+Quit the server with CTRL-BREAK.
+[04/Jun/2020 11:50:07] "GET / HTTP/1.1" 200 16351
+[04/Jun/2020 11:50:07] "GET / HTTP/1.1" 200 16351
+[04/Jun/2020 11:50:07] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[04/Jun/2020 11:50:07] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[04/Jun/2020 11:50:07] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[04/Jun/2020 11:50:07] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+Not Found: /favicon.ico
+[04/Jun/2020 11:50:08] "GET /favicon.ico HTTP/1.1" 404 1972
+C:\Users\Akshay\PycharmProjects\project_django\mysite\mysite\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+June 04, 2020 - 11:58:40
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8080/
+Quit the server with CTRL-BREAK.
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver 127.0.0.1:8080
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+June 04, 2020 - 11:58:59
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8080/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[04/Jun/2020 11:59:07] "GET / HTTP/1.1" 404 2027
+[04/Jun/2020 11:59:33] "GET /polls/ HTTP/1.1" 200 40
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying sessions.0001_initial... OK
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py makemigrations polls
+Migrations for 'polls':
+  polls\migrations\0001_initial.py
+    - Create model Question
+    - Create model Choice
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py sqlmigrate polls 0001
+BEGIN;
+--
+-- Create model Question
+--
+CREATE TABLE "polls_question" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "question_text" varchar(200) NOT NULL, "pub_date" datetime NOT NULL);
+--
+-- Create model Choice
+--
+CREATE TABLE "polls_choice" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "choice_text" varchar(200) NOT NULL, "votes" integer NOT NULL, "question_id" integer NO
+T NULL REFERENCES "polls_question" ("id") DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX "polls_choice_question_id_c5b4b260" ON "polls_choice" ("question_id");
+COMMIT;
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, polls, sessions
+Running migrations:
+  Applying polls.0001_initial... OK
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py shell
+Python 3.8.2 (tags/v3.8.2:7b3ab59, Feb 25 2020, 22:45:29) [MSC v.1916 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from polls.models import Choice, Question
+>>> Question.objects.all()
+<QuerySet []>
+>>> from django.utils import timezone
+>>> q = Question(question_text="What's new?", pub_date=timezone.now())
+>>> q
+<Question: Question object (None)>
+>>> Question.objects.all()
+<QuerySet []>
+>>> q.save()
+>>> Question.objects.all()
+<QuerySet [<Question: Question object (1)>]>
+>>> q.id
+1
+>>> q.question_text
+"What's new?"
+>>> q.pub_date
+datetime.datetime(2020, 6, 4, 7, 1, 21, 887569, tzinfo=<UTC>)
+>>> q.question_text = "What's up?"
+>>> q.save()
+>>> Question.objects.all()
+<QuerySet [<Question: Question object (1)>]>
+>>> q.question_text
+"What's up?"
+>>> q2 = Question(question_text="What's new in iphone?", pub_date=timezone.now())
+>>> q2.save()
+>>> Question.objects.all()
+<QuerySet [<Question: Question object (1)>, <Question: Question object (2)>]>
+>>> q2.question_text
+"What's new in iphone?"
+>>> for question in Question.object.all():
+... print(question.question_text)
+  File "<console>", line 2
+    print(question.question_text)
+    ^
+IndentationError: expected an indented block
+>>> Question.objects.all()
+<QuerySet [<Question: Question object (1)>, <Question: Question object (2)>]>
+>>> for question in Question.objects.all():
+... print(question.question_text)
+  File "<console>", line 2
+    print(question.question_text)
+    ^
+IndentationError: expected an indented block
+>>> for question in Question.objects.all():
+...     print(question.question_text)
+...
+What's up?
+What's new in iphone?
+>>> Question.objects.all()
+<QuerySet [<Question: Question object (1)>, <Question: Question object (2)>]>
+>>> exit()
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py shell
+Python 3.8.2 (tags/v3.8.2:7b3ab59, Feb 25 2020, 22:45:29) [MSC v.1916 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from polls.models import Choice, Question
+>>> Question.objects.all()
+<QuerySet [<Question: What's up?>, <Question: What's new in iphone?>]>
+>>> Question.objects.filter(id=1)
+<QuerySet [<Question: What's up?>]>
+>>> Question.objects.filter(id=2)
+<QuerySet [<Question: What's new in iphone?>]>
+>>> Question.objects.filter(question_text__startswith='What')
+<QuerySet [<Question: What's up?>, <Question: What's new in iphone?>]>
+>>> from django.utils import timezone
+>>> current_year = timezone.now().year
+>>> Question.objects.get(pub_date__year=current_year)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\db\models\query.py", line 419, in get
+    raise self.model.MultipleObjectsReturned(
+polls.models.Question.MultipleObjectsReturned: get() returned more than one Question -- it returned 2!
+>>> Question.objects.filter(id=3)
+<QuerySet []>
+>>> Question.objects.filter(id=4)
+<QuerySet []>
+>>> Question.objects.get(id=4)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\db\models\query.py", line 415, in get
+    raise self.model.DoesNotExist(
+polls.models.Question.DoesNotExist: Question matching query does not exist.
+>>> Question.objects.filter(pub_date__year=current_year)
+<QuerySet [<Question: What's up?>, <Question: What's new in iphone?>]>
+>>> Question.objects.get(pk=1)
+<Question: What's up?>
+>>> Question.objects.get(pk=3)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\db\models\query.py", line 415, in get
+    raise self.model.DoesNotExist(
+polls.models.Question.DoesNotExist: Question matching query does not exist.
+>>> Question.objects.get(pk=2)
+<Question: What's new in iphone?>
+>>> q = Question.objects.get(pk=1)
+>>> q.was_published_recently()
+True
+>>>  q = Question.objects.get(pk=1)
+  File "<console>", line 1
+    q = Question.objects.get(pk=1)
+    ^
+IndentationError: unexpected indent
+>>> q = Question.objects.get(pk=1)
+>>> q.choice_set.all()
+<QuerySet []>
+>>> q.choice_set.create(choice_text='Not much', votes=0)
+<Choice: Not much>
+>>> q.choice_set.create(choice_text='The sky', votes=0)
+<Choice: The sky>
+>>> c = q.choice_set.create(choice_text='Just hacking again', votes=0)
+>>>  c.question
+  File "<console>", line 1
+    c.question
+    ^
+IndentationError: unexpected indent
+>>> c.question
+<Question: What's up?>
+>>> q.choice_set.all()
+<QuerySet [<Choice: Not much>, <Choice: The sky>, <Choice: Just hacking again>]>
+>>> q.choice_set.count()
+3
+>>> Choice.objects.filter(question__pub_date__year=current_year)
+<QuerySet [<Choice: Not much>, <Choice: The sky>, <Choice: Just hacking again>]>
+>>> c = q.choice_set.filter(choice_text__startswith='Just hacking')
+>>>  c.delete()
+  File "<console>", line 1
+    c.delete()
+    ^
+IndentationError: unexpected indent
+>>> c.delete()
+(1, {'polls.Choice': 1})
+>>> Choice.objects.filter(question__pub_date__year=current_year)
+<QuerySet [<Choice: Not much>, <Choice: The sky>]>
+>>> exit()
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py createsuperuser
+Username (leave blank to use 'akshay'):
+Email address: aksshewate779@gmail.com
+Password:
+Password (again):
+This password is too short. It must contain at least 8 characters.
+This password is too common.
+This password is entirely numeric.
+Bypass password validation and create user anyway? [y/N]: n
+Password:
+Password (again):
+The password is too similar to the username.
+Bypass password validation and create user anyway? [y/N]: n
+Password:
+Password (again):
+This password is too common.
+Bypass password validation and create user anyway? [y/N]: n
+Password:
+Password (again):
+Superuser created successfully.
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 04, 2020 - 13:08:02
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[04/Jun/2020 13:08:06] "GET / HTTP/1.1" 404 2027
+Not Found: /favicon.ico
+[04/Jun/2020 13:08:07] "GET /favicon.ico HTTP/1.1" 404 2078
+[04/Jun/2020 13:08:25] "GET /admin HTTP/1.1" 301 0
+[04/Jun/2020 13:08:25] "GET /admin/ HTTP/1.1" 302 0
+[04/Jun/2020 13:08:25] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1913
+[04/Jun/2020 13:08:25] "GET /static/admin/css/login.css HTTP/1.1" 200 1233
+[04/Jun/2020 13:08:25] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18052
+[04/Jun/2020 13:08:25] "GET /static/admin/css/base.css HTTP/1.1" 200 16378
+[04/Jun/2020 13:08:25] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[04/Jun/2020 13:08:25] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[04/Jun/2020 13:08:26] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[04/Jun/2020 13:08:53] "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2092
+[04/Jun/2020 13:08:53] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[04/Jun/2020 13:09:13] "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2092
+[04/Jun/2020 13:09:34] "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2075
+[04/Jun/2020 13:10:34] "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2092
+[04/Jun/2020 13:12:10] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[04/Jun/2020 13:12:11] "GET /admin/ HTTP/1.1" 200 3043
+[04/Jun/2020 13:12:11] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[04/Jun/2020 13:12:11] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[04/Jun/2020 13:12:11] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+Not Found: /
+[04/Jun/2020 13:12:44] "GET / HTTP/1.1" 404 2027
+[04/Jun/2020 13:12:49] "GET /admin/ HTTP/1.1" 200 3043
+[04/Jun/2020 13:12:51] "GET /admin/password_change/ HTTP/1.1" 200 2858
+[04/Jun/2020 13:12:51] "GET /static/admin/css/forms.css HTTP/1.1" 200 8518
+[04/Jun/2020 13:12:51] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10322
+[04/Jun/2020 13:13:00] "GET /admin/ HTTP/1.1" 200 3043
+[04/Jun/2020 13:13:07] "GET /admin/auth/user/ HTTP/1.1" 200 6619
+[04/Jun/2020 13:13:07] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6190
+[04/Jun/2020 13:13:07] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[04/Jun/2020 13:13:08] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[04/Jun/2020 13:13:08] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 287630
+[04/Jun/2020 13:13:08] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6918
+[04/Jun/2020 13:13:08] "GET /static/admin/js/core.js HTTP/1.1" 200 5723
+[04/Jun/2020 13:13:08] "GET /static/admin/js/actions.js HTTP/1.1" 200 6766
+[04/Jun/2020 13:13:08] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1530
+[04/Jun/2020 13:13:08] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8941
+[04/Jun/2020 13:13:08] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[04/Jun/2020 13:13:08] "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[04/Jun/2020 13:13:08] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[04/Jun/2020 13:13:08] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[04/Jun/2020 13:13:08] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[04/Jun/2020 13:13:22] "GET /admin/auth/user/1/change/ HTTP/1.1" 200 14543
+[04/Jun/2020 13:13:22] "GET /static/admin/js/calendar.js HTTP/1.1" 200 7777
+[04/Jun/2020 13:13:22] "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 5753
+[04/Jun/2020 13:13:22] "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 12318
+[04/Jun/2020 13:13:22] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 20232
+[04/Jun/2020 13:13:22] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[04/Jun/2020 13:13:22] "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+[04/Jun/2020 13:13:22] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+[04/Jun/2020 13:13:22] "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+[04/Jun/2020 13:13:22] "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+[04/Jun/2020 13:13:22] "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+[04/Jun/2020 13:13:22] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[04/Jun/2020 13:13:22] "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[04/Jun/2020 13:14:10] "GET /admin/auth/user/ HTTP/1.1" 200 6619
+[04/Jun/2020 13:14:16] "GET /admin/ HTTP/1.1" 200 3043
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\admin.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 04, 2020 - 13:17:21
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\admin.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 04, 2020 - 13:17:44
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[04/Jun/2020 13:17:59] "GET /admin/ HTTP/1.1" 200 3722
+[04/Jun/2020 13:17:59] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[04/Jun/2020 13:17:59] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[04/Jun/2020 13:17:59] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[04/Jun/2020 13:17:59] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[04/Jun/2020 13:17:59] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[04/Jun/2020 13:17:59] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[04/Jun/2020 13:18:07] "GET /admin/polls/question/ HTTP/1.1" 200 4596
+[04/Jun/2020 13:18:07] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[04/Jun/2020 13:18:27] "GET /admin/polls/question/2/change/ HTTP/1.1" 200 5140
+[04/Jun/2020 13:18:27] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[04/Jun/2020 13:18:46] "POST /admin/polls/question/2/change/ HTTP/1.1" 302 0
+[04/Jun/2020 13:18:47] "GET /admin/polls/question/ HTTP/1.1" 200 4809
+[04/Jun/2020 13:18:47] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py shell
+Python 3.8.2 (tags/v3.8.2:7b3ab59, Feb 25 2020, 22:45:29) [MSC v.1916 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from polls.models import Question
+>>> Question.objects.all()
+<QuerySet [<Question: What's up?>, <Question: What's new in iphone X?>]>
+>>> exit()
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 04, 2020 - 13:21:34
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[04/Jun/2020 13:21:37] "GET / HTTP/1.1" 404 2027
+[04/Jun/2020 13:22:01] "GET /admin/ HTTP/1.1" 200 4067
+[04/Jun/2020 13:22:01] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[04/Jun/2020 13:22:01] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[04/Jun/2020 13:22:01] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[04/Jun/2020 13:23:45] "GET /admin/polls/question/ HTTP/1.1" 200 4598
+[04/Jun/2020 13:23:45] "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[04/Jun/2020 13:23:45] "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[04/Jun/2020 13:23:45] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[04/Jun/2020 13:23:45] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[04/Jun/2020 13:23:45] "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[04/Jun/2020 13:23:45] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[04/Jun/2020 13:23:45] "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[04/Jun/2020 13:23:45] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[04/Jun/2020 13:23:45] "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[04/Jun/2020 13:23:45] "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[04/Jun/2020 13:23:46] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[04/Jun/2020 13:23:48] "GET /admin/polls/question/2/change/ HTTP/1.1" 200 5144
+[04/Jun/2020 13:23:48] "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+[04/Jun/2020 13:23:48] "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+[04/Jun/2020 13:23:48] "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+[04/Jun/2020 13:23:48] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+[04/Jun/2020 13:23:48] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+[04/Jun/2020 13:23:48] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[04/Jun/2020 13:23:48] "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+[04/Jun/2020 13:23:48] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+[04/Jun/2020 13:23:48] "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+[04/Jun/2020 13:23:50] "GET /static/admin/img/calendar-icons.svg HTTP/1.1" 200 1094
+[04/Jun/2020 13:24:57] "GET /admin/polls/question/ HTTP/1.1" 200 4598
+[04/Jun/2020 13:24:57] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[04/Jun/2020 13:25:00] "GET /admin/polls/ HTTP/1.1" 200 2439
+[04/Jun/2020 13:25:04] "GET /admin/ HTTP/1.1" 200 4067
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py changed, reloading.
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\__init__.py", line 395, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\__init__.py", line 244, in fetch_command
+    klass = load_command_class(app_name, subcommand)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\__init__.py", line 37, in load_command_class
+    module = import_module('%s.management.commands.%s' % (app_name, name))
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\contrib\staticfiles\management\commands\runserver.py", line 3, in <module>
+    from django.core.management.commands.runserver import (
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\commands\runserver.py", line 10, in <module>
+    from django.core.servers.basehttp import (
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\servers\basehttp.py", line 14, in <module>
+    from wsgiref import simple_server
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\wsgiref\simple_server.py", line 13, in <module>
+    from http.server import BaseHTTPRequestHandler, HTTPServer
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\http\server.py", line 628, in <module>
+    class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\http\server.py", line 880, in SimpleHTTPRequestHandler
+    mimetypes.init() # try to read system mime.types
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\mimetypes.py", line 353, in init
+    db.read_windows_registry()
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\mimetypes.py", line 259, in read_windows_registry
+    with _winreg.OpenKey(hkcr, subkeyname) as subkey:
+KeyboardInterrupt
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 04, 2020 - 13:34:13
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[04/Jun/2020 13:34:15] "GET / HTTP/1.1" 404 2027
+[04/Jun/2020 13:34:21] "GET /admin/ HTTP/1.1" 200 4067
+[04/Jun/2020 13:34:21] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[04/Jun/2020 13:34:21] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[04/Jun/2020 13:34:21] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[04/Jun/2020 13:34:21] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[04/Jun/2020 13:34:21] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[04/Jun/2020 13:34:21] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[04/Jun/2020 13:34:21] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[04/Jun/2020 13:34:21] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[04/Jun/2020 13:34:21] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+Not Found: /193
+[04/Jun/2020 13:35:32] "GET /193 HTTP/1.1" 404 2054
+Not Found: /193/
+[04/Jun/2020 13:35:42] "GET /193/ HTTP/1.1" 404 2057
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 04, 2020 - 15:19:20
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[04/Jun/2020 15:19:53] "GET / HTTP/1.1" 404 2027
+Not Found: /7/
+[04/Jun/2020 15:20:02] "GET /7/ HTTP/1.1" 404 2051
+Not Found: /7/
+[04/Jun/2020 15:20:17] "GET /7/ HTTP/1.1" 404 2051
+Not Found: /7
+[04/Jun/2020 15:20:23] "GET /7 HTTP/1.1" 404 2048
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 04, 2020 - 15:22:06
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[04/Jun/2020 15:22:08] "GET / HTTP/1.1" 404 2027
+[04/Jun/2020 15:22:15] "GET /polls HTTP/1.1" 301 0
+[04/Jun/2020 15:22:15] "GET /polls/ HTTP/1.1" 200 40
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 04, 2020 - 15:23:38
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[04/Jun/2020 15:24:00] "GET / HTTP/1.1" 404 2027
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 04, 2020 - 15:24:03
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[04/Jun/2020 15:24:16] "GET /polls/ HTTP/1.1" 200 40
+[04/Jun/2020 15:24:21] "GET /polls/5 HTTP/1.1" 301 0
+[04/Jun/2020 15:24:21] "GET /polls/5/ HTTP/1.1" 200 29
+[04/Jun/2020 15:25:03] "GET /polls/2 HTTP/1.1" 301 0
+[04/Jun/2020 15:25:03] "GET /polls/2/ HTTP/1.1" 200 29
+[04/Jun/2020 15:25:15] "GET /polls/46232 HTTP/1.1" 301 0
+[04/Jun/2020 15:25:16] "GET /polls/46232/ HTTP/1.1" 200 33
+[04/Jun/2020 15:25:31] "GET /polls/46232/results HTTP/1.1" 301 0
+[04/Jun/2020 15:25:31] "GET /polls/46232/results/ HTTP/1.1" 200 48
+[04/Jun/2020 15:26:04] "GET /polls/46232/vote/ HTTP/1.1" 200 32
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 04, 2020 - 15:29:29
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 04, 2020 - 15:30:44
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[04/Jun/2020 15:31:34] "GET / HTTP/1.1" 404 2027
+[04/Jun/2020 15:31:47] "GET /polls/ HTTP/1.1" 200 35
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 04, 2020 - 15:32:19
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[04/Jun/2020 15:32:19] "GET /polls/ HTTP/1.1" 200 37
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 04, 2020 - 15:38:01
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 04, 2020 - 15:45:17
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py changed, reloading.
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\__init__.py", line 395, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\__init__.py", line 244, in fetch_command
+    klass = load_command_class(app_name, subcommand)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\__init__.py", line 37, in load_command_class
+    module = import_module('%s.management.commands.%s' % (app_name, name))
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\contrib\staticfiles\management\commands\runserver.py", line 3, in <module>
+    from django.core.management.commands.runserver import (
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\commands\runserver.py", line 10, in <module>
+    from django.core.servers.basehttp import (
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\servers\basehttp.py", line 14, in <module>
+    from wsgiref import simple_server
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\wsgiref\simple_server.py", line 13, in <module>
+    from http.server import BaseHTTPRequestHandler, HTTPServer
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\http\server.py", line 628, in <module>
+    class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\http\server.py", line 880, in SimpleHTTPRequestHandler
+    mimetypes.init() # try to read system mime.types
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\mimetypes.py", line 353, in init
+    db.read_windows_registry()
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\mimetypes.py", line 259, in read_windows_registry
+    with _winreg.OpenKey(hkcr, subkeyname) as subkey:
+KeyboardInterrupt
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 04, 2020 - 15:57:17
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[04/Jun/2020 15:57:19] "GET / HTTP/1.1" 404 2027
+[04/Jun/2020 15:57:29] "GET /polls/1 HTTP/1.1" 301 0
+Internal Server Error: /polls/1/
+Traceback (most recent call last):
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py", line 23, in detail
+    return render(request, 'polls/detail.html', {'question': question})
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: polls/detail.html
+[04/Jun/2020 15:57:29] "GET /polls/1/ HTTP/1.1" 500 88688
+Internal Server Error: /polls/2/
+Traceback (most recent call last):
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py", line 23, in detail
+    return render(request, 'polls/detail.html', {'question': question})
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: polls/detail.html
+[04/Jun/2020 15:57:59] "GET /polls/2/ HTTP/1.1" 500 88727
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py changed, reloading.
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\__init__.py", line 357, in execute
+    autoreload.check_errors(django.setup)()
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\utils\autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\apps\registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\apps\config.py", line 90, in create
+    module = import_module(entry)
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 961, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 914, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1342, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1314, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 1439, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 87, in _path_stat
+KeyboardInterrupt
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 04, 2020 - 16:02:57
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[04/Jun/2020 16:03:01] "GET / HTTP/1.1" 404 2027
+Not Found: /2/
+[04/Jun/2020 16:03:17] "GET /2/ HTTP/1.1" 404 2051
+Internal Server Error: /polls/2/
+Traceback (most recent call last):
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py", line 20, in detail
+    return render(request, 'polls/detail.html', {'question': question})
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: polls/detail.html
+[04/Jun/2020 16:07:17] "GET /polls/2/ HTTP/1.1" 500 88714
+Not Found: /polls/3/
+[04/Jun/2020 16:10:08] "GET /polls/3/ HTTP/1.1" 404 1727
+Not Found: /polls/4/
+[04/Jun/2020 16:10:23] "GET /polls/4/ HTTP/1.1" 404 1727
+Not Found: /polls/4/
+[04/Jun/2020 16:10:27] "GET /polls/4/ HTTP/1.1" 404 1727
+Internal Server Error: /polls/1/
+Traceback (most recent call last):
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py", line 20, in detail
+    return render(request, 'polls/detail.html', {'question': question})
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: polls/detail.html
+[04/Jun/2020 16:10:57] "GET /polls/1/ HTTP/1.1" 500 88675
+Not Found: /polls/3/
+[04/Jun/2020 16:11:12] "GET /polls/3/ HTTP/1.1" 404 1727
+Internal Server Error: /polls/1/
+Traceback (most recent call last):
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py", line 20, in detail
+    return render(request, 'polls/detail.html', {'question': question})
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: polls/detail.html
+[04/Jun/2020 16:13:01] "GET /polls/1/ HTTP/1.1" 500 88675
+Internal Server Error: /polls/2/
+Traceback (most recent call last):
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py", line 20, in detail
+    return render(request, 'polls/detail.html', {'question': question})
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: polls/detail.html
+[04/Jun/2020 16:13:09] "GET /polls/2/ HTTP/1.1" 500 88714
+Not Found: /polls/3/
+[04/Jun/2020 16:13:15] "GET /polls/3/ HTTP/1.1" 404 1727
+Not Found: /polls/5/
+[04/Jun/2020 16:13:21] "GET /polls/5/ HTTP/1.1" 404 1727
+Not Found: /polls/3/
+[04/Jun/2020 16:14:08] "GET /polls/3/ HTTP/1.1" 404 1727
+Internal Server Error: /polls/
+Traceback (most recent call last):
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py", line 16, in index
+    return render(request, 'polls/index.html', context)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: polls/index.html
+[04/Jun/2020 16:15:09] "GET /polls/ HTTP/1.1" 500 88759
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 04, 2020 - 16:16:08
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Internal Server Error: /polls/
+Traceback (most recent call last):
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py", line 13, in index
+    return render(request, 'polls/index.html', context)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: polls/index.html
+[04/Jun/2020 16:16:11] "GET /polls/ HTTP/1.1" 500 88924
+Internal Server Error: /polls/
+Traceback (most recent call last):
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py", line 13, in index
+    return render(request, 'polls/index.html', context)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: polls/index.html
+[04/Jun/2020 16:16:16] "GET /polls/ HTTP/1.1" 500 88787
+C:\Users\Akshay\PycharmProjects\project_django\mysite\mysite\settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 04, 2020 - 16:17:32
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>DEBUG = False
+'DEBUG' is not recognized as an internal or external command,
+operable program or batch file.
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 04, 2020 - 16:17:48
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[04/Jun/2020 16:17:53] "GET / HTTP/1.1" 404 179
+[04/Jun/2020 16:18:01] "GET /polls/ HTTP/1.1" 500 145
+[04/Jun/2020 16:18:15] "GET /polls/2/ HTTP/1.1" 500 145
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 04, 2020 - 16:18:33
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 04, 2020 - 16:18:39
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[04/Jun/2020 16:18:45] "GET / HTTP/1.1" 404 2027
+[04/Jun/2020 16:19:05] "GET /admin/ HTTP/1.1" 200 4067
+[04/Jun/2020 16:19:05] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[04/Jun/2020 16:19:05] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[04/Jun/2020 16:19:05] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[04/Jun/2020 16:19:05] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[04/Jun/2020 16:19:05] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[04/Jun/2020 16:19:05] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[04/Jun/2020 16:19:05] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[04/Jun/2020 16:19:05] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[04/Jun/2020 16:19:05] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+Internal Server Error: /polls/
+Traceback (most recent call last):
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py", line 13, in index
+    return render(request, 'polls/index.html', context)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: polls/index.html
+[04/Jun/2020 16:19:14] "GET /polls/ HTTP/1.1" 500 88787
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 05, 2020 - 11:42:05
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[05/Jun/2020 11:42:12] "GET / HTTP/1.1" 404 2027
+Not Found: /
+[05/Jun/2020 11:42:12] "GET / HTTP/1.1" 404 2027
+Internal Server Error: /polls/
+Traceback (most recent call last):
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py", line 13, in index
+    return render(request, 'polls/index.html', context)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: polls/index.html
+[05/Jun/2020 11:42:19] "GET /polls/ HTTP/1.1" 500 88787
+[05/Jun/2020 11:43:21] "GET /admin/ HTTP/1.1" 200 4067
+[05/Jun/2020 11:43:21] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[05/Jun/2020 11:43:21] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[05/Jun/2020 11:43:21] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[05/Jun/2020 11:43:21] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[05/Jun/2020 11:43:21] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[05/Jun/2020 11:43:21] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[05/Jun/2020 11:43:21] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[05/Jun/2020 11:43:21] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[05/Jun/2020 11:43:21] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+Not Found: /
+[05/Jun/2020 11:43:27] "GET / HTTP/1.1" 404 2027
+Not Found: /
+[05/Jun/2020 11:43:30] "GET / HTTP/1.1" 404 2027
+[05/Jun/2020 11:43:32] "GET /admin/ HTTP/1.1" 200 4067
+[05/Jun/2020 11:43:43] "GET /admin/polls/question/add/ HTTP/1.1" 200 4840
+[05/Jun/2020 11:43:44] "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+[05/Jun/2020 11:43:44] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[05/Jun/2020 11:43:44] "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+[05/Jun/2020 11:43:44] "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[05/Jun/2020 11:43:44] "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[05/Jun/2020 11:43:44] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[05/Jun/2020 11:43:44] "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[05/Jun/2020 11:43:44] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[05/Jun/2020 11:43:44] "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[05/Jun/2020 11:43:44] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[05/Jun/2020 11:43:44] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+[05/Jun/2020 11:43:44] "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+[05/Jun/2020 11:43:44] "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[05/Jun/2020 11:43:44] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+[05/Jun/2020 11:43:44] "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+[05/Jun/2020 11:43:44] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+[05/Jun/2020 11:43:44] "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+[05/Jun/2020 11:44:05] "GET /static/admin/img/calendar-icons.svg HTTP/1.1" 304 0
+[05/Jun/2020 11:44:15] "POST /admin/polls/question/add/ HTTP/1.1" 302 0
+[05/Jun/2020 11:44:15] "GET /admin/polls/question/ HTTP/1.1" 200 5039
+[05/Jun/2020 11:44:15] "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[05/Jun/2020 11:44:15] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[05/Jun/2020 11:44:15] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+[05/Jun/2020 11:44:15] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[05/Jun/2020 11:44:28] "GET /admin/polls/question/add/ HTTP/1.1" 200 4840
+[05/Jun/2020 11:44:28] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[05/Jun/2020 11:44:38] "POST /admin/polls/question/add/ HTTP/1.1" 302 0
+[05/Jun/2020 11:44:38] "GET /admin/polls/question/ HTTP/1.1" 200 5242
+[05/Jun/2020 11:44:38] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+Not Found: /admin/polls/1/
+[05/Jun/2020 11:45:02] "GET /admin/polls/1/ HTTP/1.1" 404 3993
+Not Found: /admin/polls/2/
+[05/Jun/2020 11:45:09] "GET /admin/polls/2/ HTTP/1.1" 404 3993
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>
+020 11:45:02] "GET /admin/polls/1/ HTTP/1.1" 404 3993
+Not Found: /admin/polls/2/
+[05/Jun/2020 11:45:09] "GET /admin/polls/2/ HTTP/1.1" 404 3993
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 05, 2020 - 11:48:18
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[05/Jun/2020 11:48:31] "GET / HTTP/1.1" 404 2027
+Internal Server Error: /polls/
+Traceback (most recent call last):
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py", line 13, in index
+    return render(request, 'polls/index.html', context)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: polls/index.html
+[05/Jun/2020 11:48:41] "GET /polls/ HTTP/1.1" 500 89063
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 05, 2020 - 11:56:53
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[05/Jun/2020 11:57:00] "GET / HTTP/1.1" 404 2027
+[05/Jun/2020 11:57:09] "GET /polls/ HTTP/1.1" 200 29
+[05/Jun/2020 11:57:15] "GET /polls/1/ HTTP/1.1" 200 29
+[05/Jun/2020 11:57:27] "GET /polls/5/ HTTP/1.1" 200 29
+Not Found: /polls/5/result/
+[05/Jun/2020 11:57:39] "GET /polls/5/result/ HTTP/1.1" 404 2739
+[05/Jun/2020 11:57:49] "GET /polls/5/results/ HTTP/1.1" 200 44
+[05/Jun/2020 11:58:00] "GET /polls/5/vote/ HTTP/1.1" 200 28
+[05/Jun/2020 11:58:14] "GET /admin/ HTTP/1.1" 200 4658
+[05/Jun/2020 11:58:18] "GET /admin/auth/user/ HTTP/1.1" 200 6619
+[05/Jun/2020 11:58:18] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[05/Jun/2020 11:58:18] "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+[05/Jun/2020 11:58:18] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+[05/Jun/2020 11:58:23] "GET /admin/auth/user/?is_staff__exact=1 HTTP/1.1" 200 7035
+[05/Jun/2020 11:58:23] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[05/Jun/2020 11:58:25] "GET /admin/auth/user/? HTTP/1.1" 200 6619
+[05/Jun/2020 11:58:25] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[05/Jun/2020 11:58:33] "GET /admin/auth/user/?q=ga HTTP/1.1" 200 5052
+[05/Jun/2020 11:58:33] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[05/Jun/2020 11:58:36] "GET /admin/auth/user/? HTTP/1.1" 200 6619
+[05/Jun/2020 11:58:37] "GET /admin/auth/user/?is_staff__exact=1 HTTP/1.1" 200 7035
+[05/Jun/2020 11:58:44] "GET /admin/ HTTP/1.1" 200 4658
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 05, 2020 - 12:02:55
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[05/Jun/2020 12:02:58] "GET / HTTP/1.1" 404 2027
+[05/Jun/2020 12:03:09] "GET /polls/2/ HTTP/1.1" 200 29
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 05, 2020 - 12:04:54
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[05/Jun/2020 12:04:57] "GET / HTTP/1.1" 404 2027
+[05/Jun/2020 12:05:08] "GET /polls/2/ HTTP/1.1" 200 29
+[05/Jun/2020 12:05:53] "GET /polls/ HTTP/1.1" 200 68
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 05, 2020 - 12:23:37
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[05/Jun/2020 12:23:44] "GET / HTTP/1.1" 404 2027
+Not Found: /2/
+[05/Jun/2020 12:24:04] "GET /2/ HTTP/1.1" 404 2051
+[05/Jun/2020 12:24:17] "GET /polls/2/ HTTP/1.1" 200 139
+Not Found: /polls//
+[05/Jun/2020 12:24:28] "GET /polls// HTTP/1.1" 404 2715
+[05/Jun/2020 12:24:37] "GET /polls/1/ HTTP/1.1" 200 126
+[05/Jun/2020 12:24:50] "GET /polls/3/ HTTP/1.1" 200 134
+[05/Jun/2020 12:24:55] "GET /polls/4/ HTTP/1.1" 200 117
+Not Found: /polls/5/
+[05/Jun/2020 12:24:59] "GET /polls/5/ HTTP/1.1" 404 1714
+[05/Jun/2020 12:25:13] "GET /polls/3/ HTTP/1.1" 200 134
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 05, 2020 - 12:27:05
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py changed, reloading.
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 10, in main
+    from django.core.management import execute_from_command_line
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\__init__.py", line 14, in <module>
+    from django.core.management.base import (
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\base.py", line 11, in <module>
+    from django.core import checks
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\checks\__init__.py", line 5, in <module>
+    from .registry import Tags, register, run_checks, tag_exists
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\checks\registry.py", line 3, in <module>
+    from django.utils.itercompat import is_iterable
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 779, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 874, in get_code
+  File "<frozen importlib._bootstrap_external>", line 972, in get_data
+KeyboardInterrupt
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 05, 2020 - 12:28:45
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[05/Jun/2020 12:28:56] "GET / HTTP/1.1" 404 2027
+[05/Jun/2020 12:29:07] "GET /polls/3/ HTTP/1.1" 200 134
+[05/Jun/2020 12:29:14] "GET /polls/4/ HTTP/1.1" 200 117
+Not Found: /polls/5/
+[05/Jun/2020 12:29:19] "GET /polls/5/ HTTP/1.1" 404 1727
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 05, 2020 - 12:31:42
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[05/Jun/2020 12:31:45] "GET / HTTP/1.1" 404 2027
+[05/Jun/2020 12:31:55] "GET /polls/2/ HTTP/1.1" 200 161
+[05/Jun/2020 12:32:23] "GET /polls/3/ HTTP/1.1" 200 156
+Not Found: /polls/5/
+[05/Jun/2020 12:32:30] "GET /polls/5/ HTTP/1.1" 404 1727
+[05/Jun/2020 12:32:39] "GET /polls/2/ HTTP/1.1" 200 161
+[05/Jun/2020 12:35:43] "GET /polls/ HTTP/1.1" 200 397
+[05/Jun/2020 12:35:55] "GET /polls/3/ HTTP/1.1" 200 156
+[05/Jun/2020 12:36:02] "GET /polls/1/ HTTP/1.1" 200 193
+[05/Jun/2020 12:36:06] "GET /polls/2/ HTTP/1.1" 200 161
+[05/Jun/2020 12:36:09] "GET /polls/1/ HTTP/1.1" 200 193
+[05/Jun/2020 12:36:16] "GET /polls/1/ HTTP/1.1" 200 193
+[05/Jun/2020 12:36:19] "GET /polls/2/ HTTP/1.1" 200 161
+[05/Jun/2020 12:36:22] "GET /polls/3/ HTTP/1.1" 200 156
+[05/Jun/2020 12:36:24] "GET /polls/1/ HTTP/1.1" 200 193
+[05/Jun/2020 12:39:50] "GET /polls/1/ HTTP/1.1" 200 193
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 05, 2020 - 12:42:08
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[05/Jun/2020 12:44:04] "GET /polls/ HTTP/1.1" 200 397
+[05/Jun/2020 12:44:08] "GET /polls/1/ HTTP/1.1" 200 193
+[05/Jun/2020 12:48:10] "GET /polls/ HTTP/1.1" 200 397
+[05/Jun/2020 12:48:17] "GET /polls/1/ HTTP/1.1" 200 568
+[05/Jun/2020 12:48:40] "POST /polls/1/vote/ HTTP/1.1" 200 28
+[05/Jun/2020 12:49:27] "GET /polls/2/ HTTP/1.1" 200 364
+[05/Jun/2020 12:50:33] "GET /polls/1/ HTTP/1.1" 200 568
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 05, 2020 - 12:54:21
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 05, 2020 - 12:54:59
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 05, 2020 - 12:56:13
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[05/Jun/2020 13:36:08] "GET /polls/1/ HTTP/1.1" 200 568
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 05, 2020 - 13:42:24
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[05/Jun/2020 13:42:28] "GET / HTTP/1.1" 404 2027
+[05/Jun/2020 13:42:35] "GET /polls/ HTTP/1.1" 200 397
+[05/Jun/2020 13:42:37] "GET /polls/1/ HTTP/1.1" 200 568
+[05/Jun/2020 13:42:39] "POST /polls/1/vote/ HTTP/1.1" 200 624
+[05/Jun/2020 13:42:45] "POST /polls/1/vote/ HTTP/1.1" 302 0
+[05/Jun/2020 13:42:45] "GET /polls/1/results/ HTTP/1.1" 200 44
+[05/Jun/2020 13:43:57] "GET /polls/2/ HTTP/1.1" 200 364
+[05/Jun/2020 13:43:58] "POST /polls/2/vote/ HTTP/1.1" 200 420
+[05/Jun/2020 13:44:42] "GET /polls/1/ HTTP/1.1" 200 568
+[05/Jun/2020 13:44:47] "POST /polls/1/vote/ HTTP/1.1" 302 0
+[05/Jun/2020 13:44:47] "GET /polls/1/results/ HTTP/1.1" 200 44
+            [05/Jun/2020 13:43:58] "POST /polls/2/vote/ HTTP/1.1" 200 420
+[05/Jun/2020 13:44:42] "GET /polls/1/ HTTP/1.1" 200 568
+[05/Jun/2020 13:44:47] "POST /polls/1/vote/ HTTP/1.1" 302 0
+[05/Jun/2020 13:44:47] "GET /polls/1/results/ HTTP/1.1" 200 44
+[05/Jun/2020 13:47:56] "GET /polls/1/ HTTP/1.1" 200 568
+[05/Jun/2020 13:47:59] "POST /polls/1/vote/ HTTP/1.1" 302 0
+[05/Jun/2020 13:47:59] "GET /polls/1/results/ HTTP/1.1" 200 44
+[05/Jun/2020 13:48:12] "POST /polls/1/vote/ HTTP/1.1" 302 0
+[05/Jun/2020 13:48:12] "GET /polls/1/results/ HTTP/1.1" 200 44
+[05/Jun/2020 13:48:48] "POST /polls/1/vote/ HTTP/1.1" 302 0
+[05/Jun/2020 13:48:48] "GET /polls/1/results/ HTTP/1.1" 200 44
+[05/Jun/2020 13:49:22] "POST /polls/1/vote/ HTTP/1.1" 302 0
+[05/Jun/2020 13:49:22] "GET /polls/1/results/ HTTP/1.1" 200 44
+[05/Jun/2020 13:49:26] "GET /polls/1/results/ HTTP/1.1" 200 44
+[05/Jun/2020 13:49:28] "GET /polls/1/results/ HTTP/1.1" 200 44
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py shell
+Python 3.8.2 (tags/v3.8.2:7b3ab59, Feb 25 2020, 22:45:29) [MSC v.1916 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> exit()
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 05, 2020 - 13:54:44
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[05/Jun/2020 13:54:46] "GET / HTTP/1.1" 404 2027
+[05/Jun/2020 13:54:58] "GET /polls/ HTTP/1.1" 200 397
+[05/Jun/2020 13:55:01] "GET /polls/1/ HTTP/1.1" 200 568
+[05/Jun/2020 13:55:03] "POST /polls/1/vote/ HTTP/1.1" 302 0
+[05/Jun/2020 13:55:03] "GET /polls/1/results/ HTTP/1.1" 200 253
+[05/Jun/2020 13:55:13] "GET /polls/1/ HTTP/1.1" 200 568
+[05/Jun/2020 13:55:15] "POST /polls/1/vote/ HTTP/1.1" 302 0
+[05/Jun/2020 13:55:15] "GET /polls/1/results/ HTTP/1.1" 200 253
+[05/Jun/2020 13:56:48] "POST /polls/1/vote/ HTTP/1.1" 302 0
+[05/Jun/2020 13:56:49] "GET /polls/1/results/ HTTP/1.1" 200 253
+[05/Jun/2020 13:56:50] "GET /polls/1/ HTTP/1.1" 200 568
+[05/Jun/2020 13:56:55] "POST /polls/1/vote/ HTTP/1.1" 302 0
+[05/Jun/2020 13:56:55] "GET /polls/1/results/ HTTP/1.1" 200 253
+[05/Jun/2020 13:57:03] "GET /polls/1/ HTTP/1.1" 200 568
+[05/Jun/2020 13:57:10] "POST /polls/1/vote/ HTTP/1.1" 302 0
+[05/Jun/2020 13:57:10] "GET /polls/1/results/ HTTP/1.1" 200 253
+[05/Jun/2020 13:57:40] "POST /polls/1/vote/ HTTP/1.1" 302 0
+[05/Jun/2020 13:57:40] "GET /polls/1/results/ HTTP/1.1" 200 253
+[05/Jun/2020 13:57:42] "GET /polls/1/ HTTP/1.1" 200 568
+[05/Jun/2020 13:57:43] "POST /polls/1/vote/ HTTP/1.1" 200 624
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\utils\autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\commands\runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\base.py", line 392, in check
+    all_issues = self._run_checks(
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\base.py", line 382, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\checks\registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\checks\urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\checks\urls.py", line 23, in check_resolver
+    return check_method()
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\urls\resolvers.py", line 407, in check
+    for pattern in self.url_patterns:
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\urls\resolvers.py", line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\urls\resolvers.py", line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Akshay\PycharmProjects\project_django\mysite\mysite\urls.py", line 21, in <module>
+    path('polls/', include('polls.urls')),
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\urls\conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\urls.py", line 7, in <module>
+    path('', views.IndexView.as_view(), name='index'),
+AttributeError: module 'polls.views' has no attribute 'IndexView'
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\utils\autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\commands\runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\base.py", line 392, in check
+    all_issues = self._run_checks(
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\base.py", line 382, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\checks\registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\checks\urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\checks\urls.py", line 23, in check_resolver
+    return check_method()
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\urls\resolvers.py", line 407, in check
+    for pattern in self.url_patterns:
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\urls\resolvers.py", line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\urls\resolvers.py", line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Akshay\PycharmProjects\project_django\mysite\mysite\urls.py", line 21, in <module>
+    path('polls/', include('polls.urls')),
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\urls\conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\urls.py", line 7, in <module>
+    path('', views.IndexView.as_view(), name='index'),
+AttributeError: module 'polls.views' has no attribute 'IndexView'
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\utils\autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\commands\runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\base.py", line 392, in check
+    all_issues = self._run_checks(
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\base.py", line 382, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\checks\registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\checks\urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\checks\urls.py", line 23, in check_resolver
+    return check_method()
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\urls\resolvers.py", line 407, in check
+    for pattern in self.url_patterns:
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\urls\resolvers.py", line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\urls\resolvers.py", line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Akshay\PycharmProjects\project_django\mysite\mysite\urls.py", line 21, in <module>
+    path('polls/', include('polls.urls')),
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\urls\conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\urls.py", line 8, in <module>
+    path('<int:pk>/', views.DetailView.as_view(), name='detail'),
+AttributeError: module 'polls.views' has no attribute 'DetailView'
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\utils\autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\commands\runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\base.py", line 392, in check
+    all_issues = self._run_checks(
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\management\base.py", line 382, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\checks\registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\checks\urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\checks\urls.py", line 23, in check_resolver
+    return check_method()
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\urls\resolvers.py", line 407, in check
+    for pattern in self.url_patterns:
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\urls\resolvers.py", line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\urls\resolvers.py", line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Akshay\PycharmProjects\project_django\mysite\mysite\urls.py", line 21, in <module>
+    path('polls/', include('polls.urls')),
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\urls\conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\urls.py", line 9, in <module>
+    path('<int:pk>/results/', views.ResultsView.as_view(), name='results'),
+AttributeError: module 'polls.views' has no attribute 'ResultsView'
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 05, 2020 - 14:07:23
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[05/Jun/2020 14:09:42] "GET / HTTP/1.1" 404 2027
+[05/Jun/2020 14:09:49] "GET /polls/ HTTP/1.1" 200 397
+[05/Jun/2020 14:09:51] "GET /polls/1/ HTTP/1.1" 200 568
+[05/Jun/2020 14:10:05] "POST /polls/1/vote/ HTTP/1.1" 302 0
+[05/Jun/2020 14:10:05] "GET /polls/1/results/ HTTP/1.1" 200 253
+[05/Jun/2020 14:10:07] "GET /polls/1/ HTTP/1.1" 200 568
+[05/Jun/2020 14:10:30] "GET /polls/1/ HTTP/1.1" 200 568
+[05/Jun/2020 14:10:36] "POST /polls/1/vote/ HTTP/1.1" 302 0
+[05/Jun/2020 14:10:36] "GET /polls/1/results/ HTTP/1.1" 200 253
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py shell
+Python 3.8.2 (tags/v3.8.2:7b3ab59, Feb 25 2020, 22:45:29) [MSC v.1916 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> import datetime
+>>> from django.utils import timezone
+>>> from polls.models import Question
+>>> future_question = Question(pub_date=timezone.now() + datetime.timedelta(days=30))
+>>> future_question.was_published_recently()
+True
+>>> exit()
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py test polls
+Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+F
+======================================================================
+FAIL: test_was_published_recently_with_future_question (polls.tests.QuestionModelTests)
+was_published_recently() returns False for questions whose pub_date
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\tests.py", line 18, in test_was_published_recently_with_future_question
+    self.assertIs(future_question.was_published_recently(), False)
+AssertionError: True is not False
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+FAILED (failures=1)
+Destroying test database for alias 'default'...
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py test polls
+Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+OK
+Destroying test database for alias 'default'...
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py test polls
+Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.006s
+
+OK
+Destroying test database for alias 'default'...
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py shell
+Python 3.8.2 (tags/v3.8.2:7b3ab59, Feb 25 2020, 22:45:29) [MSC v.1916 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from django.test.utils import setup_test_environment
+>>> setup_test_environment()
+>>> from django.test import Client
+>>> client = Client()
+>>> response = client.get('/')
+Not Found: /
+>>> response.status_code
+404
+>>> from django.urls import reverse
+>>> response = client.get(reverse('polls:index'))
+>>> response.status_code
+200
+>>> response.content
+b'<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"\n        "http://www.w3.org/TR/html4/loose.dtd">\n\n    <ul>\n    \n        <li><a href="/polls/4/">
+ghvido</a></li>\n    \n        <li><a href="/polls/3/">What is your next task?</a></li>\n    \n        <li><a href="/polls/2/">What&#x27;s new in iphone X?</a></li>\
+n    \n        <li><a href="/polls/1/">What&#x27;s up?</a></li>\n    \n    </ul>\n\n'
+>>> response.context['latest_question_list']
+<QuerySet [<Question: ghvido>, <Question: What is your next task?>, <Question: What's new in iphone X?>, <Question: What's up?>]>
+>>> exit()
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py test polls
+Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+.E........
+======================================================================
+ERROR: test_past_question (polls.tests.QuestionDetailViewTests)
+The detail view of a question with a pub_date in the past
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\tests.py", line 126, in test_past_question
+    response = self.client.get(url)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\test\client.py", line 518, in get
+    response = super().get(path, data=data, secure=secure, **extra)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\test\client.py", line 344, in get
+    return self.generic('GET', path, secure=secure, **{
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\test\client.py", line 421, in generic
+    return self.request(**r)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\test\client.py", line 496, in request
+    raise exc_value
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: polls/question_detail.html
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.123s
+
+FAILED (errors=1)
+Destroying test database for alias 'default'...
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py test polls
+Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+.E........
+======================================================================
+ERROR: test_past_question (polls.tests.QuestionDetailViewTests)
+The detail view of a question with a pub_date in the past
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\tests.py", line 126, in test_past_question
+    response = self.client.get(url)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\test\client.py", line 518, in get
+    response = super().get(path, data=data, secure=secure, **extra)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\test\client.py", line 344, in get
+    return self.generic('GET', path, secure=secure, **{
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\test\client.py", line 421, in generic
+    return self.request(**r)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\test\client.py", line 496, in request
+    raise exc_value
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: polls/question_detail.html
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.100s
+
+FAILED (errors=1)
+Destroying test database for alias 'default'...
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py test polls
+Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+.E........
+======================================================================
+ERROR: test_past_question (polls.tests.QuestionDetailViewTests)
+The detail view of a question with a pub_date in the past
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\tests.py", line 126, in test_past_question
+    response = self.client.get(url)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\test\client.py", line 518, in get
+    response = super().get(path, data=data, secure=secure, **extra)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\test\client.py", line 344, in get
+    return self.generic('GET', path, secure=secure, **{
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\test\client.py", line 421, in generic
+    return self.request(**r)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\test\client.py", line 496, in request
+    raise exc_value
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: polls/question_detail.html
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.098s
+
+FAILED (errors=1)
+Destroying test database for alias 'default'...
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py test polls
+Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 0.066s
+
+OK
+Destroying test database for alias 'default'...
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 05, 2020 - 15:30:48
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[05/Jun/2020 15:30:51] "GET / HTTP/1.1" 404 2027
+[05/Jun/2020 15:30:57] "GET /polls/ HTTP/1.1" 200 471
+[05/Jun/2020 15:30:57] "GET /static/polls/style.css HTTP/1.1" 200 28
+[05/Jun/2020 15:31:29] "GET /polls/ HTTP/1.1" 200 471
+[05/Jun/2020 15:31:29] "GET /static/polls/style.css HTTP/1.1" 200 29
+[05/Jun/2020 15:31:43] "GET /polls/ HTTP/1.1" 200 471
+[05/Jun/2020 15:31:43] "GET /static/polls/style.css HTTP/1.1" 200 29
+[05/Jun/2020 15:31:55] "GET /polls/ HTTP/1.1" 200 471
+[05/Jun/2020 15:31:55] "GET /static/polls/style.css HTTP/1.1" 200 26
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 05, 2020 - 15:39:05
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[05/Jun/2020 15:39:07] "GET / HTTP/1.1" 404 2027
+[05/Jun/2020 15:39:13] "GET /polls/ HTTP/1.1" 200 471
+[05/Jun/2020 15:39:13] "GET /static/polls/style.css HTTP/1.1" 200 102
+[05/Jun/2020 15:39:13] "GET /static/polls/images/background.gif HTTP/1.1" 200 4214
+C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\Lib\asyncio\windows_events.py changed, reloading.
+Python path configuration:
+  PYTHONHOME = (not set)
+  PYTHONPATH = (not set)
+  program name = 'C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\python.exe'
+  isolated = 0
+  environment = 1
+  user site = 1
+  import site = 1
+  sys._base_executable = 'C:\\Users\\Akshay\\AppData\\Local\\Programs\\Python\\Python38-32\\python.exe'
+  sys.base_prefix = ''
+  sys.base_exec_prefix = ''
+  sys.executable = 'C:\\Users\\Akshay\\PycharmProjects\\project_django\\venv\\Scripts\\python.exe'
+  sys.prefix = ''
+  sys.exec_prefix = ''
+  sys.path = [
+    'C:\\Users\\Akshay\\AppData\\Local\\Programs\\Python\\Python38-32\\python38.zip',
+    '.\\DLLs',
+    '.\\lib',
+    'C:\\Users\\Akshay\\AppData\\Local\\Programs\\Python\\Python38-32',
+  ]
+Fatal Python error: init_fs_encoding: failed to get the Python codec of the filesystem encoding
+Python runtime state: core initialized
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x000041f4 (most recent call first):
+<no Python frame>
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 06, 2020 - 19:01:32
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[06/Jun/2020 19:01:47] "GET / HTTP/1.1" 404 2027
+Not Found: /pplls/
+[06/Jun/2020 19:01:58] "GET /pplls/ HTTP/1.1" 404 2063
+[06/Jun/2020 19:02:10] "GET /polls/ HTTP/1.1" 200 471
+[06/Jun/2020 19:02:10] "GET /static/polls/style.css HTTP/1.1" 304 0
+[06/Jun/2020 19:02:10] "GET /static/polls/images/background.gif HTTP/1.1" 304 0
+[06/Jun/2020 19:02:12] "GET /polls/1/ HTTP/1.1" 200 568
+[06/Jun/2020 19:02:16] "POST /polls/1/vote/ HTTP/1.1" 302 0
+[06/Jun/2020 19:02:16] "GET /polls/1/results/ HTTP/1.1" 200 254
+[06/Jun/2020 19:04:29] "GET /polls/1/ HTTP/1.1" 200 568
+[06/Jun/2020 19:04:32] "POST /polls/1/vote/ HTTP/1.1" 302 0
+[06/Jun/2020 19:04:32] "GET /polls/1/results/ HTTP/1.1" 200 254
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\admin.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 06, 2020 - 19:06:35
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[06/Jun/2020 19:06:40] "GET / HTTP/1.1" 404 2027
+[06/Jun/2020 19:06:51] "GET /admin/ HTTP/1.1" 200 4658
+[06/Jun/2020 19:06:52] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[06/Jun/2020 19:06:52] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[06/Jun/2020 19:06:52] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[06/Jun/2020 19:06:52] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[06/Jun/2020 19:06:52] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[06/Jun/2020 19:06:52] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[06/Jun/2020 19:06:52] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[06/Jun/2020 19:06:52] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[06/Jun/2020 19:06:52] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[06/Jun/2020 19:06:55] "GET /admin/polls/question/ HTTP/1.1" 200 5055
+[06/Jun/2020 19:06:55] "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[06/Jun/2020 19:06:55] "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[06/Jun/2020 19:06:55] "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[06/Jun/2020 19:06:55] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[06/Jun/2020 19:06:55] "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[06/Jun/2020 19:06:55] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[06/Jun/2020 19:06:55] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:06:55] "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[06/Jun/2020 19:06:55] "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[06/Jun/2020 19:06:55] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[06/Jun/2020 19:06:55] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[06/Jun/2020 19:07:39] "GET /admin/polls/question/4/change/ HTTP/1.1" 200 5100
+[06/Jun/2020 19:07:39] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+[06/Jun/2020 19:07:39] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:07:39] "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+[06/Jun/2020 19:07:39] "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+[06/Jun/2020 19:07:39] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+[06/Jun/2020 19:07:39] "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+[06/Jun/2020 19:07:39] "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+[06/Jun/2020 19:07:39] "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+[06/Jun/2020 19:07:39] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+[06/Jun/2020 19:07:50] "POST /admin/polls/question/4/change/ HTTP/1.1" 302 0
+[06/Jun/2020 19:07:50] "GET /admin/polls/question/ HTTP/1.1" 200 5256
+[06/Jun/2020 19:07:50] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:07:50] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\admin.py changed, reloading.
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 10, in main
+    from django.core.management import execute_from_command_line
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\__init__.py", line 1, in <module>
+    from django.utils.version import get_version
+  File "C:\Users\Akshay\PycharmProjects\project_django\venv\lib\site-packages\django\utils\version.py", line 4, in <module>
+    import subprocess
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\subprocess.py", line 49, in <module>
+    import signal
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\signal.py", line 4, in <module>
+    from enum import IntEnum as _IntEnum
+  File "C:\Users\Akshay\AppData\Local\Programs\Python\Python38-32\lib\enum.py", line 2, in <module>
+    from types import MappingProxyType, DynamicClassAttribute
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 657, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 562, in module_from_spec
+  File "<frozen importlib._bootstrap>", line 541, in _init_module_attrs
+  File "<frozen importlib._bootstrap>", line 382, in cached
+  File "<frozen importlib._bootstrap_external>", line 427, in _get_cached
+  File "<frozen importlib._bootstrap_external>", line 362, in cache_from_source
+  File "<frozen importlib._bootstrap_external>", line 62, in _path_join
+KeyboardInterrupt
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 06, 2020 - 19:09:25
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[06/Jun/2020 19:09:27] "GET / HTTP/1.1" 404 2027
+[06/Jun/2020 19:09:33] "GET /admin/ HTTP/1.1" 200 4954
+[06/Jun/2020 19:09:35] "GET /admin/polls/question/ HTTP/1.1" 200 5061
+[06/Jun/2020 19:09:35] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:09:39] "GET /admin/polls/question/2/change/ HTTP/1.1" 200 5235
+[06/Jun/2020 19:09:39] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\admin.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 06, 2020 - 19:10:58
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\admin.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 06, 2020 - 19:11:18
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[06/Jun/2020 19:11:19] "GET / HTTP/1.1" 404 2027
+[06/Jun/2020 19:11:26] "GET /admin/ HTTP/1.1" 200 5383
+[06/Jun/2020 19:11:30] "GET /admin/polls/choice/ HTTP/1.1" 200 4548
+[06/Jun/2020 19:11:30] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:11:37] "GET /admin/polls/choice/add/ HTTP/1.1" 200 5785
+[06/Jun/2020 19:11:37] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:11:48] "POST /admin/polls/choice/add/ HTTP/1.1" 200 5951
+[06/Jun/2020 19:11:48] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:11:56] "POST /admin/polls/choice/add/ HTTP/1.1" 302 0
+[06/Jun/2020 19:11:56] "GET /admin/polls/choice/ HTTP/1.1" 200 4965
+[06/Jun/2020 19:11:56] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\admin.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 06, 2020 - 19:17:07
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[06/Jun/2020 19:17:09] "GET / HTTP/1.1" 404 2027
+[06/Jun/2020 19:17:15] "GET /admin/ HTTP/1.1" 200 5201
+[06/Jun/2020 19:17:18] "GET /admin/polls/question/ HTTP/1.1" 200 5061
+[06/Jun/2020 19:17:18] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:17:24] "GET /admin/polls/question/4/change/ HTTP/1.1" 200 11968
+[06/Jun/2020 19:17:24] "GET /static/admin/js/collapse.js HTTP/1.1" 200 2239
+[06/Jun/2020 19:17:24] "GET /static/admin/js/inlines.js HTTP/1.1" 200 13773
+[06/Jun/2020 19:17:24] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:17:48] "POST /admin/polls/question/4/change/ HTTP/1.1" 302 0
+[06/Jun/2020 19:17:49] "GET /admin/polls/question/ HTTP/1.1" 200 5256
+[06/Jun/2020 19:17:49] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:17:52] "GET /admin/polls/question/4/change/ HTTP/1.1" 200 16935
+[06/Jun/2020 19:17:52] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\admin.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 06, 2020 - 19:19:30
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[06/Jun/2020 19:19:32] "GET / HTTP/1.1" 404 2027
+[06/Jun/2020 19:19:45] "GET /admin/ HTTP/1.1" 200 5497
+[06/Jun/2020 19:19:47] "GET /admin/polls/question/ HTTP/1.1" 200 5061
+[06/Jun/2020 19:19:47] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:19:49] "GET /admin/polls/question/3/change/ HTTP/1.1" 200 10864
+[06/Jun/2020 19:19:50] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:19:54] "GET /admin/polls/question/3/history/ HTTP/1.1" 200 2317
+[06/Jun/2020 19:19:58] "GET /admin/polls/question/3/change/ HTTP/1.1" 200 10864
+[06/Jun/2020 19:20:03] "GET /admin/polls/ HTTP/1.1" 200 2439
+[06/Jun/2020 19:20:07] "GET /admin/polls/question/3/change/ HTTP/1.1" 200 10864
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\admin.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 06, 2020 - 19:22:18
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[06/Jun/2020 19:22:20] "GET / HTTP/1.1" 404 2027
+[06/Jun/2020 19:22:26] "GET /admin/ HTTP/1.1" 200 5497
+[06/Jun/2020 19:22:28] "GET /admin/polls/question/ HTTP/1.1" 200 5530
+[06/Jun/2020 19:22:28] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:22:30] "GET /admin/polls/question/4/change/ HTTP/1.1" 200 14573
+[06/Jun/2020 19:22:30] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\admin.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 06, 2020 - 19:23:31
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[06/Jun/2020 19:23:32] "GET / HTTP/1.1" 404 2027
+[06/Jun/2020 19:23:42] "GET /admin/ HTTP/1.1" 200 5497
+[06/Jun/2020 19:23:45] "GET /admin/polls/question/ HTTP/1.1" 200 5892
+[06/Jun/2020 19:23:45] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:23:49] "GET /admin/polls/question/3/change/ HTTP/1.1" 200 10864
+[06/Jun/2020 19:23:49] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:23:59] "GET /admin/polls/question/ HTTP/1.1" 200 5892
+[06/Jun/2020 19:24:01] "GET /admin/polls/question/2/change/ HTTP/1.1" 200 10874
+[06/Jun/2020 19:24:01] "GET /admin/polls/question/2/change/ HTTP/1.1" 200 10874
+[06/Jun/2020 19:24:01] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:24:05] "GET /admin/polls/question/ HTTP/1.1" 200 5892
+[06/Jun/2020 19:24:06] "GET /admin/polls/question/1/change/ HTTP/1.1" 200 14588
+[06/Jun/2020 19:24:06] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:25:00] "GET /admin/polls/question/ HTTP/1.1" 200 5892
+[06/Jun/2020 19:25:00] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\models.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 06, 2020 - 19:26:43
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[06/Jun/2020 19:26:44] "GET / HTTP/1.1" 404 2027
+[06/Jun/2020 19:26:50] "GET /admin/ HTTP/1.1" 200 5497
+[06/Jun/2020 19:26:52] "GET /admin/polls/question/ HTTP/1.1" 200 6106
+[06/Jun/2020 19:26:52] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:26:52] "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+[06/Jun/2020 19:26:54] "GET /admin/polls/question/1/change/ HTTP/1.1" 200 14588
+[06/Jun/2020 19:26:55] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:26:57] "GET /admin/polls/question/ HTTP/1.1" 200 6106
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\admin.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 06, 2020 - 19:28:16
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[06/Jun/2020 19:28:18] "GET / HTTP/1.1" 404 2027
+[06/Jun/2020 19:28:25] "GET /admin/ HTTP/1.1" 200 5497
+[06/Jun/2020 19:28:29] "GET /admin/polls/question/ HTTP/1.1" 200 6983
+[06/Jun/2020 19:28:29] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:28:32] "GET /admin/polls/question/?pub_date__gte=2020-05-30+00%3A00%3A00%2B00%3A00&pub_date__lt=2020-06-07+00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 7997
+[06/Jun/2020 19:28:32] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:28:34] "GET /admin/polls/question/?pub_date__gte=2020-06-06+00%3A00%3A00%2B00%3A00&pub_date__lt=2020-06-07+00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 4734
+[06/Jun/2020 19:28:34] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:28:36] "GET /admin/polls/question/?pub_date__gte=2020-06-01+00%3A00%3A00%2B00%3A00&pub_date__lt=2020-07-01+00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 7997
+[06/Jun/2020 19:28:36] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:28:39] "GET /admin/polls/question/? HTTP/1.1" 200 6983
+[06/Jun/2020 19:28:39] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:28:44] "GET /admin/polls/question/?pub_date__gte=2020-01-01+00%3A00%3A00%2B00%3A00&pub_date__lt=2021-01-01+00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 7997
+[06/Jun/2020 19:28:45] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:28:47] "GET /admin/polls/question/?pub_date__gte=2020-06-01+00%3A00%3A00%2B00%3A00&pub_date__lt=2020-07-01+00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 7997
+[06/Jun/2020 19:28:47] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:28:48] "GET /admin/polls/question/?pub_date__gte=2020-06-01+00%3A00%3A00%2B00%3A00&pub_date__lt=2020-07-01+00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 7997
+[06/Jun/2020 19:28:48] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+C:\Users\Akshay\PycharmProjects\project_django\mysite\polls\admin.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 06, 2020 - 19:29:32
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[06/Jun/2020 19:29:34] "GET / HTTP/1.1" 404 2027
+[06/Jun/2020 19:29:39] "GET /admin/ HTTP/1.1" 200 5497
+[06/Jun/2020 19:29:40] "GET /admin/polls/question/ HTTP/1.1" 200 7303
+[06/Jun/2020 19:29:40] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:29:40] "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+[06/Jun/2020 19:29:52] "GET /admin/polls/question/?q=gh HTTP/1.1" 200 6295
+[06/Jun/2020 19:29:52] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+C:\Users\Akshay\PycharmProjects\project_django\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 06, 2020 - 19:35:39
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[06/Jun/2020 19:35:40] "GET / HTTP/1.1" 404 2027
+[06/Jun/2020 19:35:48] "GET /admin/ HTTP/1.1" 200 5497
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 06, 2020 - 19:42:22
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[06/Jun/2020 19:42:25] "GET / HTTP/1.1" 404 2027
+[06/Jun/2020 19:42:36] "GET /admin/ HTTP/1.1" 200 182
+[06/Jun/2020 19:42:38] "GET /admin/ HTTP/1.1" 200 182
+[06/Jun/2020 19:42:40] "GET /admin/ HTTP/1.1" 200 182
+[06/Jun/2020 19:42:42] "GET /admin/ HTTP/1.1" 200 182
+[06/Jun/2020 19:42:44] "GET /admin/ HTTP/1.1" 200 182
+[06/Jun/2020 19:42:45] "GET /admin/ HTTP/1.1" 200 182
+[06/Jun/2020 19:42:51] "GET /admin/ HTTP/1.1" 200 182
+[06/Jun/2020 19:43:03] "GET /admin/polls/question/ HTTP/1.1" 200 182
+[06/Jun/2020 19:43:04] "GET /admin/ HTTP/1.1" 200 182
+[06/Jun/2020 19:43:06] "GET /admin/polls/question/ HTTP/1.1" 200 182
+[06/Jun/2020 19:43:08] "GET /admin/ HTTP/1.1" 200 182
+[06/Jun/2020 19:43:09] "GET /admin/polls/question/ HTTP/1.1" 200 182
+[06/Jun/2020 19:43:10] "GET /admin/ HTTP/1.1" 200 182
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 06, 2020 - 19:43:49
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[06/Jun/2020 19:43:51] "GET / HTTP/1.1" 404 2027
+[06/Jun/2020 19:43:58] "GET /admin/ HTTP/1.1" 200 5497
+[06/Jun/2020 19:46:24] "GET /admin/auth/group/ HTTP/1.1" 200 3503
+[06/Jun/2020 19:46:24] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:46:27] "GET /admin/ HTTP/1.1" 200 5497
+[06/Jun/2020 19:46:29] "GET /admin/auth/user/ HTTP/1.1" 200 6619
+[06/Jun/2020 19:46:29] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:46:29] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+[06/Jun/2020 19:46:37] "GET /admin/auth/user/add/ HTTP/1.1" 200 5754
+[06/Jun/2020 19:46:37] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:46:41] "GET /admin/auth/user/ HTTP/1.1" 200 6619
+[06/Jun/2020 19:46:43] "GET /admin/ HTTP/1.1" 200 5497
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 06, 2020 - 19:50:29
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[06/Jun/2020 19:50:31] "GET / HTTP/1.1" 404 2027
+[06/Jun/2020 19:50:40] "GET /admin/ HTTP/1.1" 200 181
+[06/Jun/2020 19:50:42] "GET /admin/ HTTP/1.1" 200 181
+[06/Jun/2020 19:50:43] "GET /admin/ HTTP/1.1" 200 181
+[06/Jun/2020 19:50:44] "GET /admin/ HTTP/1.1" 200 181
+[06/Jun/2020 19:50:44] "GET /admin/ HTTP/1.1" 200 181
+[06/Jun/2020 19:50:44] "GET /admin/ HTTP/1.1" 200 181
+[06/Jun/2020 19:50:45] "GET /admin/ HTTP/1.1" 200 181
+[06/Jun/2020 19:50:45] "GET /admin/ HTTP/1.1" 200 181
+[06/Jun/2020 19:50:45] "GET /admin/ HTTP/1.1" 200 181
+[06/Jun/2020 19:50:48] "GET /admin/ HTTP/1.1" 200 181
+[06/Jun/2020 19:50:50] "GET /admin/ HTTP/1.1" 200 181
+[06/Jun/2020 19:50:50] "GET /admin/ HTTP/1.1" 200 181
+[06/Jun/2020 19:50:51] "GET /admin/ HTTP/1.1" 200 181
+[06/Jun/2020 19:50:51] "GET /admin/ HTTP/1.1" 200 181
+[06/Jun/2020 19:50:51] "GET /admin/ HTTP/1.1" 200 181
+[06/Jun/2020 19:50:52] "GET /admin/ HTTP/1.1" 200 181
+[06/Jun/2020 19:50:53] "GET /admin/ HTTP/1.1" 200 181
+[06/Jun/2020 19:50:53] "GET /admin/ HTTP/1.1" 200 181
+[06/Jun/2020 19:50:57] "GET /admin/ HTTP/1.1" 200 181
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 06, 2020 - 19:52:12
+Django version 3.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[06/Jun/2020 19:52:14] "GET / HTTP/1.1" 404 2027
+[06/Jun/2020 19:52:19] "GET /admin/ HTTP/1.1" 200 5497
+[06/Jun/2020 19:52:21] "GET /admin/polls/question/ HTTP/1.1" 200 7303
+[06/Jun/2020 19:52:21] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[06/Jun/2020 19:52:25] "GET /admin/ HTTP/1.1" 200 5497
+[06/Jun/2020 19:52:32] "GET /polls/ HTTP/1.1" 200 477
+[06/Jun/2020 19:52:34] "GET /polls/1/ HTTP/1.1" 200 683
+[06/Jun/2020 19:52:40] "POST /polls/1/vote/ HTTP/1.1" 302 0
+[06/Jun/2020 19:52:40] "GET /polls/1/results/ HTTP/1.1" 200 294
+[06/Jun/2020 19:52:41] "GET /polls/1/ HTTP/1.1" 200 683
+[06/Jun/2020 19:52:48] "GET /polls/3/ HTTP/1.1" 200 359
+[06/Jun/2020 19:52:51] "GET /polls/4/ HTTP/1.1" 200 676
+[06/Jun/2020 19:52:54] "POST /polls/4/vote/ HTTP/1.1" 302 0
+[06/Jun/2020 19:52:54] "GET /polls/4/results/ HTTP/1.1" 200 286
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>
+
+
+
+
+local console2 
+
+icrosoft Windows [Version 10.0.18363.836]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django>cd mysite
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>python manage.py startapp polls
+
+(venv) C:\Users\Akshay\PycharmProjects\project_django\mysite>
+
+
+
+
